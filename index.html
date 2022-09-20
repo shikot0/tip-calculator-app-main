@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script> 
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="images/logo.svg" alt="Splitter Logo"> 
+    <div id="card">
+      <form>
+        <label for="bill-input">Bill</label>
+        <div id="bill-input-div"> 
+          <input type="text" pattern="[0-9]{1,}" id="bill-input">
+        </div>
+        <p>Select Tip %</p>
+        <div id="tip-selection-grid">
+          <div class="radio-button-div">
+            <input type="radio" name="tip-percentage" id="5%" class="tip-percentage-button" value="5">
+            <label for="5%">5%</label>
+          </div> 
+          <div class="radio-button-div">
+            <input type="radio" name="tip-percentage" id="10%" class="tip-percentage-button" value="10">
+            <label for="10%">10%</label>
+          </div>
+          <div class="radio-button-div">
+            <input type="radio" name="tip-percentage" id="15%" class="tip-percentage-button" value="15">
+            <label for="15%">15%</label>
+          </div>
+          <div class="radio-button-div">
+            <input type="radio" name="tip-percentage" id="25%" class="tip-percentage-button" value="25">
+            <label for="25%">25%</label>
+          </div>
+          <div class="radio-button-div">
+            <input type="radio" name="tip-percentage" id="50%" class="tip-percentage-button" value="50">
+            <label for="50%">50%</label>
+          </div>
+          <input type="text" placeholder="Custom" id="custom-tip-input" pattern="[0-9]">
+        </div>
+        <label for="number-of-people">Number of People</label>  
+        <div id="number-of-people-div">
+          <input type="text" pattern="[0-9]{1,}" id="number-of-people">
+        </div>
+      </form> 
+      <div id="output-section">
+        <div id="outputs">
+          <div id="tip-amount-div">
+            <p class="output-header">Tip Amount</p>
+            <p>/ person</p>
+            <p id="tip-output">0.00</p> 
+          </div>
+          <div id="total-per-person-div">
+            <p class="output-header">Total</p>
+             <p>/ person</p> 
+            <p id="total-per-person-output">0.00</p> 
+          </div>
+        </div>
+        <button type="button" id="reset-button">Reset</button> 
+      </div>
+    </div> 
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/shikot0">shikoto</a>.
+  </div>
+</body>
+</html>

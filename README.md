@@ -1,0 +1,1 @@
+While doing this project I focused on how to make the tip calculator feel as functional as possible so that no matter which input is changed the outputs change as well.
