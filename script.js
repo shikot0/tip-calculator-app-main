@@ -4,7 +4,7 @@ const customTipInput = document.getElementById('custom-tip-input')
 const numberOfPeople = document.getElementById('number-of-people'); 
 const tipOutput = document.getElementById('tip-output');
 const totalOutput = document.getElementById('total-per-person-output');
-
+const resetBtn = document.getElementById('reset-button');
 
 
 tipPercentageButtons.forEach(tipBtn => {
@@ -51,6 +51,15 @@ function output() {
     }
 } 
 
+resetBtn.addEventListener('click', () => {
+    billInput.value = '';
+    tipPercentageButtons.forEach(tipBtn => { 
+        tipBtn.classList.remove('selected');  
+        tipBtn.checked = false; 
+    }) 
+    customTipInput.value = ''; 
+    numberOfPeople.value = '';
+})
 customTipInput.addEventListener('input', output);   
 billInput.addEventListener('input', output, cannotBeZero);    
 numberOfPeople.addEventListener('input', output, cannotBeZero);  
